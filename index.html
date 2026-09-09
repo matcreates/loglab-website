@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LogLab</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111112;
+      --text: #f2f2f2;
+      --muted: #8a8a8e;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+    }
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      margin-bottom: 28px;
+      background: conic-gradient(from 90deg, #34c759, #ffd60a, #ff9f0a, #ff375f, #bf5af2, #0a84ff, #34c759);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 12px;
+    }
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0;
+    }
+    footer {
+      position: absolute;
+      bottom: 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="icon" aria-hidden="true"></div>
+  <h1>Hello, LogLab.</h1>
+  <p>Professional color grading for iOS. Coming soon.</p>
+  <footer>&copy; 2026 LogLab</footer>
+</body>
+</html>
