@@ -98,7 +98,7 @@ a {
   width: 26px;
   height: 26px;
   border-radius: 7px;
-  background: var(--gradient);
+  background: url('/app-icon.png') center / cover no-repeat;
   flex-shrink: 0;
 }
 
