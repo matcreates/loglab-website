@@ -3,61 +3,244 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LogLab</title>
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #111112;
-      --text: #f2f2f2;
-      --muted: #8a8a8e;
-    }
-    * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
-      height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-    }
-    .icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      margin-bottom: 28px;
-      background: conic-gradient(from 90deg, #34c759, #ffd60a, #ff9f0a, #ff375f, #bf5af2, #0a84ff, #34c759);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 12px;
-    }
-    p {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin: 0;
-    }
-    footer {
-      position: absolute;
-      bottom: 24px;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-  </style>
+  <title>LogLab — Professional color grading for iOS</title>
+  <meta name="description" content="LogLab is a professional color grading app for iPhone. Real-time Metal-powered grading, accurate log-to-Rec.709 transforms for Sony, Canon, DJI and Apple Log, and a cinematic LUT library." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2334c759'/%3E%3Cstop offset='0.33' stop-color='%23ffd60a'/%3E%3Cstop offset='0.66' stop-color='%23ff375f'/%3E%3Cstop offset='1' stop-color='%230a84ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='9' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
-  <div class="icon" aria-hidden="true"></div>
-  <h1>Hello, LogLab.</h1>
-  <p>Professional color grading for iOS. Coming soon.</p>
-  <footer>&copy; 2026 LogLab</footer>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark"></span>
+        LogLab
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pro">LogLab Pro</a>
+        <a href="/support.html">Support</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn btn-disabled" href="#">Coming soon</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-glow"></div>
+    <div class="container">
+      <span class="eyebrow">Now in TestFlight</span>
+      <h1>Color grading.<br />Nothing else.</h1>
+      <p class="lead">LogLab is a focused, professional grading tool for iPhone — accurate log transforms, a real-time Metal pipeline, and a cinematic LUT library. No timelines, no clutter.</p>
+      <div class="hero-actions">
+        <a class="btn btn-disabled btn-lg" href="#">Download on the App Store</a>
+        <a class="btn btn-secondary btn-lg" href="#features">See what's inside</a>
+      </div>
+      <p class="hero-note">Coming soon to the App Store</p>
+
+      <div class="hero-shot asset-placeholder">
+        Hero screenshot / device mockup
+        <code>hero-shot@2x.png — 1840×1150</code>
+      </div>
+    </div>
+  </header>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Grading engine</div>
+        <h2>Built for footage that starts flat</h2>
+        <p>Every tool in LogLab exists to take your log footage somewhere better — accurately, and in real time.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-icon" style="background: rgba(10,132,255,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0a84ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 16c3-1 4-9 7-9s3 10 6 10 3-6 5-6" />
+            </svg>
+          </div>
+          <h3>Accurate log transforms</h3>
+          <p>Purpose-built log-to-Rec.709 transforms for Sony S-Log, Canon C-Log, DJI D-Log and Apple Log — tuned per format, not a generic curve.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background: rgba(255,159,10,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ff9f0a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" />
+            </svg>
+          </div>
+          <h3>Real-time Metal pipeline</h3>
+          <p>Every adjustment renders live on-device through a custom Metal pipeline — full-resolution preview, no waiting for proxies.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background: rgba(52,199,89,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+              <circle cx="9" cy="6" r="1.6" fill="#34c759" stroke="none" />
+              <circle cx="16" cy="12" r="1.6" fill="#34c759" stroke="none" />
+              <circle cx="11" cy="18" r="1.6" fill="#34c759" stroke="none" />
+            </svg>
+          </div>
+          <h3>Hands-on manual controls</h3>
+          <p>Log format, exposure, saturation, contrast and grain — direct, precise sliders for grading exactly the way you want.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background: rgba(191,90,242,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#bf5af2" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
+              <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+              <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+              <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+            </svg>
+          </div>
+          <h3>Preloaded LUT library</h3>
+          <p>A curated set of ready-to-use LUTs for people who'd rather grade with one tap — including a set of cinematic, movie-inspired looks.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background: rgba(255,55,95,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ff375f" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <path d="M3 9h18M8 4v16M16 4v16" />
+            </svg>
+          </div>
+          <h3>Import your own LUTs</h3>
+          <p>Bring in DaVinci Resolve-format LUTs and grade with your own studio looks, right on your phone.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background: rgba(255,214,10,0.12);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#ffd60a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v13" />
+              <path d="M7 12l5 5 5-5" />
+              <path d="M4 20h16" />
+            </svg>
+          </div>
+          <h3>Pro-grade export</h3>
+          <p>Export in ProRes 422 HQ or ProRes 4444 for a finishing pipeline that keeps every bit of the grade intact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Interface</div>
+        <h2>Every format, every aspect ratio</h2>
+        <p>LogLab adapts to whatever you shoot — square Clips grid for browsing, full manual control when you need it.</p>
+      </div>
+
+      <div class="showcase-grid">
+        <div class="showcase-item">
+          <div class="asset-placeholder">
+            Clips grid screenshot
+            <code>screenshot-clips.png — 1290×2796</code>
+          </div>
+          <p class="showcase-caption">Clips</p>
+        </div>
+        <div class="showcase-item">
+          <div class="asset-placeholder">
+            Manual grading screenshot
+            <code>screenshot-manual.png — 1290×2796</code>
+          </div>
+          <p class="showcase-caption">Manual grading</p>
+        </div>
+        <div class="showcase-item">
+          <div class="asset-placeholder">
+            LUTs screenshot
+            <code>screenshot-luts.png — 1290×2796</code>
+          </div>
+          <p class="showcase-caption">LUTs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pro">
+    <div class="container">
+      <div class="section-head">
+        <div class="kicker">Pricing</div>
+        <h2>Free to grade. Pro when you need more.</h2>
+        <p>LogLab is free to download with the full manual grading toolkit. Upgrade to Pro for studio LUTs and finishing-grade export.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="price">$0</p>
+          <p class="price-note">Forever</p>
+          <ul>
+            <li><span>✓</span> Full manual grading toolkit</li>
+            <li><span>✓</span> Sony, Canon, DJI &amp; Apple Log support</li>
+            <li><span>✓</span> Standard preloaded LUTs</li>
+            <li><span>✓</span> Standard video export</li>
+          </ul>
+          <a class="btn btn-secondary" href="#" style="width:100%;">Included with LogLab</a>
+        </div>
+
+        <div class="plan plan-pro">
+          <span class="plan-badge">LogLab Pro</span>
+          <h3>Pro</h3>
+          <p class="price">$4<span>/month</span></p>
+          <p class="price-note">or $38.99/year</p>
+          <ul>
+            <li><span>✓</span> Everything in Free</li>
+            <li><span>✓</span> Cinematic, movie-inspired LUT presets</li>
+            <li><span>✓</span> Import your own DaVinci-format LUTs</li>
+            <li><span>✓</span> ProRes 422 HQ &amp; ProRes 4444 export</li>
+          </ul>
+          <a class="btn btn-primary" href="#" style="width:100%;">Upgrade in the app</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container">
+      <h2>Grade it right, right on your phone.</h2>
+      <p>LogLab is on its way to the App Store.</p>
+      <a class="btn btn-disabled btn-lg" href="#">Download on the App Store</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/">
+            <span class="brand-mark"></span>
+            LogLab
+          </a>
+          <p>A professional color grading app for iPhone, built by Mathis Garcia.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pro">LogLab Pro</a></li>
+            <li><a href="/support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="/privacy.html">Privacy Policy</a></li>
+            <li><a href="/terms.html">Terms of Use</a></li>
+            <li><a href="/refunds.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LogLab. All rights reserved.</span>
+        <span>Made by Mathis Garcia</span>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
